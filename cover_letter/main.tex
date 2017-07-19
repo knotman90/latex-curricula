@@ -1,0 +1,85 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[12pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                           % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{orange}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.77]{geometry}
+\setlength{\hintscolumnwidth}{5cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Davide}{Spataro}
+%\title{Resumé title}                               % optional, remove / comment the line if not wanted
+\address{Via P. Pietro Bucci}{Rende, 87136}{Italy}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+39~(392)~65~800~15}                   % optional, remove / comment the line if not wanted
+\phone[mobile]{+44~(0795)~86~793~367}                         % optional, remove / comment the line if not wanted
+\phone[fixed]{+39~(0963)~8860~97}                      % optional, remove / comment the line if not wanted
+\email{davide90.spataro@gmail.com}
+%\email{davidespataro@davidespataro.com}                               % optional, remove / comment the line if not wanted
+\homepage{www.davidespataro.it}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+\usepackage[document]{ragged2e}
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{Arm Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+\date{January 01, 1984}
+\opening{Dear Sir or Madam,}
+\closing{Yours faithfully,}
+\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+\justify
+I have recently learned about the new open vacancy related to the positions of \textbf{Position you are applying} in \textbf{company name}
+and I am writing to state my interest on it. For completion, I attach my resume to this cover letter.
+
+I am currently attending the last year of my PhD in mathematics and Computer Science at the University of Calabria and I expect to finish by October 2017. My PhD programme has been mainly focused on scientific computation for massively parallel architectures for macroscopic natural phenomena simulation. I also have an MSc in Computer Science (\textit{cum laude}) from the University of Calabria, focused on theoretical computer science, AI, answer set programming and parallel computing.
+
+What attracts me to \textbf{company name} is my interest in dealing with innovative software systems. As an ambitious
+PhD student I wish to work for a leading international company, developing innovative and advanced products.
+After having challenged myself in different multicultural and professional backgrounds, by working on my MSc Thesis (for 8 months) at University of Plymouth, and by being accepted as Research Visiting student at  University of Edinburgh (10 months) and at University of Warwick (6 weeks), I am keen to work for a global, international-minded, company and be part of a proactive and dynamic attitude. Contributing to investigating and developing new technologies for future products, excites me and
+I feel naturally driven to this type of work.
+
+In addition to scientific computing, during my studies I have also been interested in how the exa-scale simulation data paradigm could be interactively visualized and analyzed. This has been deepened with an enriching experience at University of Edinburgh on the \textit{VELaSSCO} EU project and on functional programming.
+My willingness and curiosity to learn, with my determination to pursue an objective with resilience, have always driven me through my studies and especially my PhD, where I have also learnt to take ownership of my tasks, while working and communicating effectively in a project-team with international partners. This mindset and the different
+topics I have focused on so far, have given me the right adaptability and multidisciplinary background to fit in a company with an international outlook.
+
+I have attached my CV for your consideration and hope you will consider my application. I am available
+for interview to discuss my application further at your convenience and look forward to hearing from you.
+
+
+\makeletterclosing
+
+\end{document}
+
+
+%% end of file `template.tex'.
