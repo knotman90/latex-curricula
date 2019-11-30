@@ -1,0 +1,170 @@
+\documentclass[]{twentysecondcv}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%
+%%PROFILE SIDE BAR%%
+%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%
+%%PERSONAL INFO%%%
+%%%%%%%%%%%%%%%%
+
+%\profilepic{alice.jpeg} %path of profile pic
+\cvname{Davide Spataro} %your name
+\cvjobtitle{Software Engineer}%your actual job position
+\cvdate{14 February 1990}%date of birth
+\cvaddress{The Netherlands}%address
+\cvnumberphone{+39 3926580015}%telphone number
+\cvmail{davide90.spataro@gmail.com}%e-mail
+\cvsite{http://www.davidespataro.it}%personal site
+
+
+\aboutme{I am a curious and passionate software engineer and my interests include, but are not limited to, C++, parallel programming and GPGPU. I am an avid reader of technical and scientific books and articles but I also enjoy participating in competitive programming competitions or writing blog articles. I am passionate about classical music, photography and investing. When I am not coding I am most likely paddling in the Mediterranean sea or on a race bike.I feel naturally inclined to working in a team, but I am also capable of  tackling and solving complex problems autonomously. I like to be surrounded by people I can learn from. I drink a lot of coffee. }%About me section
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%Skill bar section, each skill must have a value between 0 an 6 (float)%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\skills{{C and Modern C++-11-14/5},{Linux-Bash/5},{CUDA-OpenCL-MPI/4.5},{git/4.0},{CMake/3.5},{Matlab/3}, {Java/2.5}, {SQL/2.5}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%Skill text section, each skill must have a value between 0 an 6%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\skillstext{{Italian/10},{English/8.5},{Dutch/5}}
+
+\makeprofile
+%%%%%%%%%%%%%%%%%%%%
+%%END PROFILE SIDE BAR%%
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%BODY%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+%%SIMPLE SECTION%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+%\section{interests}
+%The heroine and the dreamer of Wonderland;  Alice is the principal character.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%TWENTY LIST ITEMS%%%%%%%%%%%%%%
+%%    Four arguments: date; title; where; description %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{education}
+
+\begin{twenty}
+  \twentyitem
+    {2014-2018}
+    {Ph.D. {\normalfont in Mathematics and Computer Science}}
+    {University of Calabria, Italy}
+    {Seamless acceleration of numerical regular grid methods on many-core systems.}
+  \twentyitem
+    {2011-2014}
+    {M.Sc. magna cum laude in Computer Science}
+    {University of Calabria, Italy}
+    {Accelerating the new \texttt{SCIARA-fv3} numerical model by different GPGPU strategies.}
+  \twentyitem
+    {2008-2011}
+    {B.Sc. in Computer Science}
+    {Univerisity of Calabria, Italy}
+    {\texttt{B-finder} a system for automatic detection of buildings from aerophotogrammetries.}
+\end{twenty}
+
+
+\section{experience}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%TWENTY LIST ITEMS%%%%%%%%%%%%%%
+%%    Four arguments: date; title; where; description %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{twenty}
+  \twentyitem
+    {since 2018}
+    {Software Design Engineer}
+    {Eindhove, The Netherlands}
+    {\emph{Department of Metrology}}
+  \twentyitem
+    {2017}
+    {Ph.D. {\normalfont Research Visiting Student}}
+    {University of Warwick, United Kingdom}
+    {Department of Computer Science}
+  \twentyitem
+    {2016}
+    {Ph.D. {\normalfont Research Visiting Student}}
+    {University of Edinburgh, Scotland}
+    {School of Engineering}
+  \twentyitem
+    {2014-2017}
+    {Ph.D. {\normalfont Student and Teaching Assistant}}
+    {University of Calabria, Italy}
+    {Department of Mathematics and Computer Science}
+  \twentyitem
+    {2013-2014}
+    {Academic Tutor}
+    {Univerisity of Calabria, Italy}
+    {Department of Mathematics and Computer Science}
+\end{twenty}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%TWENTY LIST ITEMS%%%%%%%%%%%%%%
+%%    Four arguments: date; title; where; description %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{publications}
+\begin{twenty}
+    \twentyitem
+    {2018}
+    {A first multi-GPU/multi-node implementation of the open computing abstraction layer}
+    {}
+    {\footnotesize{Journal of Computational Science, \url{https://doi.org/10.1016/j.jocs.2018.09.012}}}
+
+    \twentyitem
+    {2018}
+    {The Open Computing Abstraction Layer for Parallel Complex Systems Modeling on Many-Core Systems}
+    {}
+    {\footnotesize{Journal of Parallel and Distributed Computing, Volume 121, 53-70, \url{https://doi.org/10.1016/j.jpdc.2018.07.005}}} 
+    
+    \twentyitem
+    {2016}
+    {Multi-Agent System with Multiple Group Modelling for Bird Flocking on GPU}
+    {}
+    {\footnotesize{Proceedings of The 2016 International Conference on Parallel, distributed and Network-Based Processing (PDP), February 17-19 2016, Crete, Greece}}
+    
+    
+    \twentyitem
+    {2015}
+    {Efficient Lava Flows Simulations with OpenCL: A preliminary application for Civil Defence Purposes}
+    {}
+    {\footnotesize{Proceedings of The $10^{th}$ International Conference on P2P, Parallel, Grid, Cloud and Internet Computing, November 4-6, 2015, Krakow, Poland}}
+     
+    \twentyitem 
+    {2015}
+    {CUDA Dynamic Active Thread List Strategy to Accelerate Debris Flow Simulations}
+    {}
+    {\footnotesize{Proceedings of The 2015 International Conference on Parallel, Distributed and Network-Based Processing (PDP), Turku, Finland, pp 330-338}}
+
+\end{twenty}
+Full list on \url{www.davidespataro.it}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%TWENTY LIST SHORTITEMS%%%%%%%%%%%%%%
+%%% Two arguments: date; title/description %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\begin{twentyshort}
+%  \twentyitemshort
+%    {1865}
+%    {Chapter Five,  Advice from a Caterpillar.}
+%\end{twentyshort}
+
+\section{Short Bio}
+He was born the $14^{th}$ February 1990 and grew up in Nicotera, a small city in Southern Italy. He attended the secondary school focusing on humanities and in 2008 he moved to Cosenza, where he studied first and then collaborated with researchers of the Department of Computer Science on the simulation of complex natural systems. His research interests revolve around the topics of `Parallel Computing' and  HPC. Since 2018 he lives in Eindhoven, working as Software Engineer at ASML for photo-lithography systems. He studied piano and music since he was eight for ten years, long enough to make him addicted to classical and jazz music. 
+
+%%%%%%%%%%%%%%%%%%%%
+%%%%%ENDBODY%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+
+\end{document} 
