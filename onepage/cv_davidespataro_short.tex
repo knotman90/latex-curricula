@@ -1,6 +1,7 @@
 \documentclass[]{twentysecondscv}
 \usepackage{amssymb}
 \usepackage{enumitem}
+\usepackage{fontawesome}
 \begin{document}
 
 %%%%%%%%%%%%%%%%%
@@ -19,7 +20,7 @@
 \cvmail{davide90.spataro@gmail.com}%e-mail
 \cvsite{http://www.davidespataro.it}%personal site
 
-\aboutme{I am a curious and passionate software engineer and my interests include, but are not limited to, C++, parallel programming and GPGPU. I am an avid reader of technical and scientific books and articles but I also enjoy participating in competitive programming competitions or writing blog articles. I am passionate about classical music, photography and investing. When I am not coding I am most likely paddling in the Mediterranean sea or on a race bike.I feel naturally inclined to working in a team, but I am also capable of  tackling and solving complex problems autonomously. I like to be surrounded by people I can learn from. I drink a lot of coffee. }%About me section
+\aboutme{I am a curious and passionate software engineer and my interests include, but are not limited to, C++, parallel programming and GPGPU. I am an active \href{https://stackoverflow.com/users/1417063/davide-spataro}{StackOverflow \faStackOverflow} user, avid reader of technical and scientific books and articles but I also enjoy participating in competitive programming competitions or writing blog articles. I am passionate about classical music, photography and investing. When I am not coding I am most likely paddling in the Mediterranean sea or on a race bike.I feel naturally inclined to working in a team, but I am also capable of  tackling and solving complex problems autonomously. I like to be surrounded by people I can learn from. I drink a lot of coffee \faCoffee. }%About me section
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%Skill bar section, each skill must have a value between 0 an 6 (float)%%%%%%%
@@ -61,8 +62,9 @@
     {
     	\vspace{-15pt}
     	\begin{itemize}[leftmargin=*]
-    		\item[-] blablabla
-    		\item[-] blablabla
+    		\footnotesize
+    		\item[-] Designed a DSL aimed at both efficient and quick implementation of CA and FDM on multi-core/nodes/accelearators systems.
+    		\item[-] Implemented a family of \texttt{C/C++/OpenCL/MPI} libraries \href{www.blablabla.it}{\faGithub}
     	\end{itemize} 
     }
   \fivetwentyitem
@@ -110,8 +112,10 @@
 		\vspace{-10pt}
 		\begin{itemize}[leftmargin=*]
 			\footnotesize
-			\item[-] blablabla
-			\item[-] blablabla
+			\item[-] Implemented C/C++ metrology software for overlay optimization.
+			\item[-] Benchmarking of core metrology code aimed at improving speed of execution.
+			\item[-] Managing CI pipeline with Jenkins.
+			\item[-] Increasing UT coverage for legacy C/C++ code.
 		\end{itemize} 
 	}
   \twentyitem
