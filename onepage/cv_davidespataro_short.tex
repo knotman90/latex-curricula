@@ -2,8 +2,13 @@
 \usepackage{amssymb}
 \usepackage{enumitem}
 \usepackage{fontawesome}
-\begin{document}
+\usepackage{ragged2e}
 
+
+
+\begin{document}
+	
+	
 %%%%%%%%%%%%%%%%%
 %%PROFILE SIDE BAR%%
 %%%%%%%%%%%%%%%%%
@@ -20,7 +25,9 @@
 \cvmail{davide90.spataro@gmail.com}%e-mail
 \cvsite{http://www.davidespataro.it}%personal site
 
-\aboutme{I am a curious and passionate software engineer and my interests include, but are not limited to, C++, parallel programming and GPGPU. I am an active \href{https://stackoverflow.com/users/1417063/davide-spataro}{StackOverflow \faStackOverflow} user, avid reader of technical and scientific books and articles but I also enjoy participating in competitive programming competitions or writing blog articles. I am passionate about classical music, photography and investing. When I am not coding I am most likely paddling in the Mediterranean sea or on a race bike.I feel naturally inclined to working in a team, but I am also capable of  tackling and solving complex problems autonomously. I like to be surrounded by people I can learn from. I drink a lot of coffee \faCoffee. }%About me section
+
+\aboutme{ \emergencystretch 3em I am a curious and passionate software engineer and my interests include, but are not limited to, C++, parallel programming and GPGPU. I am an active \href{https://stackoverflow.com/users/1417063/davide-spataro}{StackOverflow \faStackOverflow} user, avid reader of technical and scientific books and articles, I also enjoy participating in competitive programming competitions or writing blog articles. I feel naturally inclined to working in a team, but I am also capable of  tackling and solving complex problems autonomously. 
+I like to be surrounded by people I can learn from. I am passionate about classical music, photography and investing. When I am not coding I am most likely either paddling in the Mediterranean sea, lifting weights in the gym or fighting gravity on a race bike. I drink a lot of coffee \faCoffee.}%About me section
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%Skill bar section, each skill must have a value between 0 an 6 (float)%%%%%%%
@@ -47,62 +54,33 @@
 %\section{interests}
 %The heroine and the dreamer of Wonderland;  Alice is the principal character.
 
+\section{key skills}
+\begin{twentyshort}
+  \twentyitemshort
+	{\small \textbf{Fundamentals}}
+	{\small Algorithm and Data structure, TDD, OOP, Design Patterns}
+  \twentyitemshort
+    {\small \textbf{\texttt{C/C++-11+}}}
+    {\small Meta-programming, standard,  boost, google test/mock libraries}
+   \twentyitemshort
+    {\small \textbf{Build and Version Control}}
+    {\small  \texttt{git}, \texttt{GNU make}, \texttt{CMake}}
+  \twentyitemshort
+    {\small \textbf{Concurrency}}
+    {\small  Threading, CUDA, OpenCL, MPI, OpenMP, OpenACC}
+  \twentyitemshort
+	{\small \textbf{OS and Scripting}}
+	{\small  Linux, Bash, Windows, Python (prior experience)}
+\end{twentyshort}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%TWENTY LIST ITEMS%%%%%%%%%%%%%%
 %%    Four arguments: date; title; where; description %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{education}
-
-\begin{twenty}
-\fivetwentyitem
-    {2014-2018}
-    {Ph.D. {\normalfont in Mathematics and Computer Science}}
-    {University of Calabria, Italy}
-    {\emph{Seamless acceleration of numerical regular grid methods on many-core systems.}}
-    {
-    	\vspace{-15pt}
-    	\begin{itemize}[leftmargin=*]
-    		\footnotesize
-    		\item[-] Designed a DSL aimed at both efficient and quick implementation of CA and FDM on multi-core/nodes/accelearators systems.
-    		\item[-] Implemented a family of \texttt{C/C++/OpenCL/MPI} libraries \href{www.blablabla.it}{\faGithub}
-    	\end{itemize} 
-    }
-  \fivetwentyitem
-    {2011-2014}
-    {M.Sc. magna cum laude in Computer Science}
-    {University of Calabria, Italy}
-    {\emph{Accelerating the new} \texttt{SCIARA-fv3} \emph{numerical model by different GPGPU strategies.}}
-    {
-    	\vspace{-15pt}
-    	\begin{itemize}[leftmargin=*]
-    		\footnotesize
-    		\item[-] Investigated GPGPU parallelization for a computational heavy fluid-dynamic model.
-    		\item[-] Achieved speedups up to $200x$.
-			\item[-] Implemented a 3D \texttt{OpenGL} interactive UI
-    	\end{itemize} 
-    }
-  \fivetwentyitem
-    {2008-2011}
-    {B.Sc. in Computer Science}
-    {University of Calabria, Italy}
-    {\texttt{B-finder}\emph{ a system for automatic detection of buildings from aerophotogrammetries.}}
-    {
-    	\vspace{-15pt}
-    	\begin{itemize}[leftmargin=*]
-    		\footnotesize
-    		\item[-] blablabla
-    		\item[-] blablabla
-    	\end{itemize} 
-    }
-\end{twenty}
 
 
 \section{experience}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%TWENTY LIST ITEMS%%%%%%%%%%%%%%
-%%    Four arguments: date; title; where; description %%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{twenty}
   \twentyitem
     {since 2018}
@@ -112,10 +90,10 @@
 		\vspace{-10pt}
 		\begin{itemize}[leftmargin=*]
 			\footnotesize
-			\item[-] Implemented C/C++ metrology software for overlay optimization.
-			\item[-] Benchmarking of core metrology code aimed at improving speed of execution.
-			\item[-] Managing CI pipeline with Jenkins.
-			\item[-] Increasing UT coverage for legacy C/C++ code.
+			\item[-] Implemented C/C++-11 core software for overlay optimization.
+			\item[-] Benchmarking of metrology code aimed at improving speed of execution.
+			\item[-] Adotped TDD and piloting CI transition (Jenkins).
+			\item[-] Increased UT coverage for legacy C/C++ code.
 		\end{itemize} 
 	}
   \twentyitem
@@ -126,8 +104,8 @@
 		\vspace{-10pt}
 		\begin{itemize}[leftmargin=*]
 			\footnotesize
-			\item[-] blablabla
-			\item[-] blablabla
+			\item[-] Implementation of an efficient solve for tridiagonal linear system within \href{https://github.com/OP-DSL/OPS}{OPS \faGithub}
+			\item[-] Optimization using Intel SIMD intrinsics (SSE)
 		\end{itemize} 
 	}
   \twentyitem
@@ -138,19 +116,20 @@
 		\vspace{-10pt}
 		\begin{itemize}[leftmargin=*]
 			\footnotesize
-			\item[-] blablabla
-			\item[-] blablabla
+			\item[-] Investigated parallel visualization strategies exascale simulation as part of the VELaSSCo project.
+			\item[-] Prototype implementation for multi-GPU rendering using C++14.
 		\end{itemize} 
 	}
   \twentyitem
     {2014-2017}
-    {Ph.D. {\normalfont Student and Teaching Assistant}}
+    {Ph.D. {\normalfont Teaching Assistant}}
     {University of Calabria, Italy}
 	{
 		\vspace{-10pt}
 		\begin{itemize}[leftmargin=*]
-			\item[-] blablabla
-			\item[-] blablabla
+			\footnotesize
+			\item[-] Teaching assistant for the course of \emph{UI and event programming} for $\approx 100$ attendees.
+			\item[-] The students were, eventually, able to program a full fledged 3D videogame in Java. 
 		\end{itemize} 
 	}
   \twentyitem
@@ -161,12 +140,55 @@
 	    \vspace{-10pt}
 	    \begin{itemize}[leftmargin=*]
 	    	\footnotesize
-	    	\item[-] blablabla
-	    	\item[-] blablabla
+	    	\item[-] Tutoring students for the course of \textit{object oriented programming} and \textit{algorithm and data structures}
 	    \end{itemize} 
     }
 \end{twenty}
 
+\section{education}
+
+\begin{twenty}
+	\fivetwentyitem
+	{2014-2018}
+	{Ph.D. {\normalfont in Mathematics and Computer Science}}
+	{University of Calabria, Italy}
+	{\emph{Seamless acceleration of numerical regular grid methods on many-core systems.}}
+	{
+		\vspace{-15pt}
+		\begin{itemize}[leftmargin=*]
+			\footnotesize
+			\item[-] Designed a DSL aimed at both efficient and quick implementation of CA and FDM on multi-core/nodes/accelearators systems \href{https://dl.acm.org/citation.cfm?id=3059134}{\faBook}.
+			\item[-] Implemented a family of \texttt{C/C++/OpenCL/MPI} libraries \href{www.blablabla.it}{\faGithub} 
+		\end{itemize} 
+	}
+	\fivetwentyitem
+	{2011-2014}
+	{M.Sc. magna cum laude in Computer Science}
+	{University of Calabria, Italy}
+	{\emph{Accelerating the new} \texttt{SCIARA-fv3} \emph{numerical model by different GPGPU strategies.}}
+	{
+		\vspace{-15pt}
+		\begin{itemize}[leftmargin=*]
+			\footnotesize
+			\item[-] Investigated GPGPU parallelization for a computationally heavy fluid-dynamic model.
+			\item[-] Achieved speedups up to $200x$ enabling it for risk map generation.
+			\item[-] Implemented a 3D \texttt{OpenGL} interactive UI
+		\end{itemize} 
+	}
+	\fivetwentyitem
+	{2008-2011}
+	{B.Sc. in Computer Science}
+	{University of Calabria, Italy}
+	{\texttt{B-finder}\emph{ a system for automatic detection of buildings from aerophotogrammetries.}}
+	{
+		\vspace{-15pt}
+		\begin{itemize}[leftmargin=*]
+			\footnotesize
+			\item[-] Designed an active contour model like algorithm for accurate buildings segmentation from aerial images.
+			\item[-] Matlab prototype implementation.
+		\end{itemize} 
+	}
+\end{twenty}
 
 
 
@@ -174,7 +196,8 @@
 %%%%%%%%%%%%%TWENTY LIST ITEMS%%%%%%%%%%%%%%
 %%    Four arguments: date; title; where; description %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{publications}
+\section{publications$^*$}
+\footnotesize
 \begin{twenty}
     \twentyitem
     {2018}
@@ -200,15 +223,15 @@
     {Efficient Lava Flows Simulations with OpenCL: A preliminary application for Civil Defence Purposes}
     {}
     {\footnotesize{Proceedings of The $10^{th}$ International Conference on P2P, Parallel, Grid, Cloud and Internet Computing, November 4-6, 2015, Krakow, Poland}}
-     
-    \twentyitem 
-    {2015}
-    {CUDA Dynamic Active Thread List Strategy to Accelerate Debris Flow Simulations}
-    {}
-    {\footnotesize{Proceedings of The 2015 International Conference on Parallel, Distributed and Network-Based Processing (PDP), Turku, Finland, pp 330-338}}
+%     
+%    \twentyitem 
+%    {2015}
+%    {CUDA Dynamic Active Thread List Strategy to Accelerate Debris Flow Simulations}
+%    {}
+%    {\footnotesize{Proceedings of The 2015 International Conference on Parallel, Distributed and Network-Based Processing (PDP), Turku, Finland, pp 330-338}}
 
 \end{twenty}
-Full list on \url{www.davidespataro.it}
+$^*$Full list on \url{www.davidespataro.it}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%TWENTY LIST SHORTITEMS%%%%%%%%%%%%%%
 %%% Two arguments: date; title/description %%%%%%%%%%
