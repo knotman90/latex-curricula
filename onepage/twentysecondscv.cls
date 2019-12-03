@@ -81,18 +81,20 @@
 \pgfmathsetlength{\imagescale}{\imagewidth/600}%
 
 
-\newcommand{\profilesection}[2]{ \vspace{2pt} {\noindent\color{black!80} \huge #1  \vspace{5pt} \rule[0.15\baselineskip]{#2}{1pt} \vspace{0pt}}}
+\newcommand{\profilesection}[2]{ \vspace{7pt} {\noindent\color{black!80} \huge #1  \vspace{7pt} \rule[0.15\baselineskip]{#2}{1pt} \vspace{0pt}}}
 
 
 \newcommand{\cvdate}[1]{\renewcommand{\givencvdate}{#1}}
+\newcommand{\cvdateone}[1]{\renewcommand{\givencvdateone}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\givencvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\givennumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\givencvaddress}{#1}}
 \newcommand{\cvsite}[1]{\renewcommand{\givencvsite}{#1}}
-\newcommand{\aboutme}[1]{\renewcommand{\givenaboutme}{ \justifying#1}}
+\newcommand{\aboutme}[1]{\renewcommand{\givenaboutme}{ \noindent \justifying#1}}
 \newcommand{\profilepic}[1]{\renewcommand{\givenprofilepic}{#1}}
 \newcommand{\cvname}[1]{\renewcommand{\givencvname}{#1}}
 \newcommand{\cvjobtitle}[1]{\renewcommand{\givencvjobtitle}{#1}}
+\newcommand{\emptyspace}[1]{\renewcommand{\givenemptyspace}{ \noindent \justifying#1}}
 
 \newcommand{\givencvname}{REQUIRED!}
 \newcommand{\givencvdate}{}
@@ -107,7 +109,7 @@
 
 
 \newcommand*\icon[1]{\tikz[baseline=(char.base)]{
-            \node[shape=circle,draw,inner sep=1pt, fill=mainblue,mainblue,text=white] (char) {#1};}}
+            \node[shape=circle,draw,inner sep=1pt,minimum size=8.0mm, fill=cerulean,cerulean,text=white] (char) {#1};}}
 \newcommand*\round[2]{%
   \tikz[baseline=(char.base)]\node[anchor=north west, draw,rectangle, rounded corners, inner sep=1.6pt, minimum size=5.5mm,
     text height=3.6mm,  fill=#2,#2,text=white](char){#1} ;}
@@ -120,7 +122,7 @@
 \foreach [count=\i] \x/\y in {#1}
 {
   \draw[fill=maingray,maingray] (0,-\i) rectangle (6,-\i+0.4);
-  \draw[fill=white,mainblue](0,-\i) rectangle (1.2*\y,-\i+0.4);
+  \draw[fill=white,cerulean](0,-\i) rectangle (1.2*\y,-\i+0.4);
   \node [above right ] at (0,-\i+0.4) {\x};
   \foreach \z in {0,1,2,...,10}
   {
@@ -158,7 +160,7 @@
 \newcommand{\makeprofile}
 {
 \begin{tikzpicture}[remember picture,overlay]
-   	 \node [rectangle, fill=asidecolor, anchor=north, minimum width=9.90cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+   	 \node [rectangle, fill=asidecolor, anchor=north, minimum width=9.4cm, minimum height=\paperheight+2cm] (box) at (-5.0cm,+0.60cm){};
 \end{tikzpicture}
 
 
@@ -166,38 +168,61 @@
 \begin{flushleft}
 \hspace{13pt}
 %\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-%    \clip (600/2, 567/2) circle (567/2);
+ %   \clip (600/2, 567/2) circle (567/2);
 
 %        \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{\givenprofilepic}};
 %\end{tikzpicture}
-
-{\Huge\color{mainblue}\givencvname}
-
+\vspace{-0.31cm}
+{\Huge\color{cerulean}\givencvname}
 \begin{flushright}
 {\Large\color{black!80}\givencvjobtitle}
 \end{flushright}
-\vspace{3pt}
+
+\vspace{0.5cm}
+
+
+
+\profilesection{Personal Info}{2.08cm}
+\givenemptyspace
+ 
+\vspace{-0.5cm}
+\hspace{-0.65cm}
 \renewcommand{\arraystretch}{1.6}
-\begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{5cm}}
-\ifthenelse{\equal{\givencvdate}{}}{}{\textsc{\Large\icon{\Info}} & \givencvdate\\}
+\begin{tabular}{p{0.5cm} @{\hskip 0.8cm}p{5cm}}
+\ifthenelse{\equal{\givencvdate}{}}{}{\textsc{\Large\icon{\faCalendar}} & \givencvdate\\}
+
 \ifthenelse{\equal{\givencvaddress}{}}{}{\textsc{\Large\icon{\Letter}} & \givencvaddress\\}
-\ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \givennumberphone\\}
-\ifthenelse{\equal{\givencvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \href{\givencvsite}{\textcolor{cerulean}\givencvsite}}\\
-\ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\givencvmail}{\givencvmail}}
+
+\ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\Large\icon{\faPhoneSquare}} & \givennumberphone\\}
+\ifthenelse{\equal{\givencvsite}{}}{}{\textsc{\Large\icon{\faGlobe}} & \href{\givencvsite}{\textcolor{cerulean}\givencvsite}}\\
+\ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\large\icon{\faEnvelope}} & \href{mailto:\givencvmail}{\givencvmail}}
 \end{tabular}
 
 
-\profilesection{About me}{3.2cm}
+
+
+\profilesection{About me}{3.25cm}
 \givenaboutme
 
 
-\profilesection{Skill}{5cm}
+\profilesection{Languages}{2.79cm}
 \givenskill
-\giventextskill
+%\giventextskill
 \noindent
 \scriptsize
 \noindent
-(*)[Skill scale: 0 (Fundamental Awareness) to 10 (Expert).]
+(*)[Skill scale: 0 (Awareness) to 10 (Expert).]
+
+
+%\profilesection{Personal Skills}{1.0cm}
+%\vspace{-10pt}
+%\begin{description}[leftmargin=*]
+%	\small
+%	\item[Agile]
+%	\item[Scrum Methodology]
+%	\item[Attention to details]
+%\end{description} 
+
 
 \end{flushleft}
 \end{textblock}
@@ -216,9 +241,9 @@
    \round{#1#2#3}{
       \ifcase\value{colorCounter}%
         maingray\or%
-        mainblue\or%
+        cerulean\or%
         maingray\or%
-        mainblue\else%
+        cerulean\else%
         maingray\fi%
     }%
   }%
@@ -231,7 +256,7 @@
     \LARGE\color{headercolor}%
     \@sectioncolor #1%
   }
-  \par\vspace{\parskip}
+  \par\vspace{0.5pt}
 }
 
 \renewcommand{\subsection}[1]{
@@ -255,10 +280,10 @@
 }{%
   \end{tabular*}
 }
-\renewcommand{\bfseries}{\color{headercolor}}
+
 \newcommand{\twentyitem}[4]{%
   \hspace{5pt}#1&\parbox[t]{11.5cm}{%
-    \textbf{#2}%
+    #2%
     \hfill%
     {\footnotesize#3}\\%
     #4\vspace{\parsep}
@@ -267,7 +292,7 @@
 
 \newcommand{\fivetwentyitem}[5]{%
 	\hspace{5pt}#1&\parbox[t]{11.5cm}{%
-		\textbf{#2}%
+		#2%
 		\hfill%
 		{\footnotesize#3}\\%
 		#4\vspace{\parsep}\\%
@@ -283,10 +308,10 @@
 }{%
   \end{tabular*}
 }
-\renewcommand{\bfseries}{\color{headercolor}}
+%\renewcommand{\bfseries}{\color{headercolor}}
 \newcommand{\twentyitemshort}[2]{%
-  \hspace{5pt}#1&\parbox[t]{11.5cm}{%
-    \textbf{#2}%
+  \hspace{5pt}#1&\parbox[t]{9.2cm}{%
+    {#2}%
   }\\}
 
 
